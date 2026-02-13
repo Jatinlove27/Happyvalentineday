@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rose Day</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #5a0000, #8b0000, #b30000);
+            overflow-x: hidden;
+        }
+
+        .glow-text {
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff1a1a;
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        .bouquet {
+            margin-top: 25px;
+            width: 220px;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.7));
+        }
+
+        .rose {
+            position: fixed;
+            top: -50px;
+            font-size: 24px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <p class="glow-text">
+            Hilo hiloo pidduuu kya haal chaal 😁😁 <br>
+            dekho baat aisi haiiii ki aapke buddhu ne aapke liye kuch bnaya hai <br>
+            toh aap bas ab free hoke isse parooo <br><br>
+            I loveee youu soooo muchhhhh ❤️❤️
+        </p>
+
+        <!-- Rose Bouquet Image -->
+        <img class="bouquet"
+        src="https://pngimg.com/uploads/rose_bouquet/rose_bouquet_PNG23.png"
+        alt="Rose Bouquet">
+
+        <br>
+
+        <!-- Button goes to Propose Day -->
+        <button onclick="location.href='proposal.html'">
+            chaliye shuru karte hai ❤️
+        </button>
+
+    </div>
+
+    <script>
+        function createRose() {
+            const rose = document.createElement("div");
+            rose.classList.add("rose");
+            rose.innerHTML = "🌹";
+            rose.style.left = Math.random() * 100 + "vw";
+            rose.style.animationDuration = (4 + Math.random() * 4) + "s";
+            document.body.appendChild(rose);
+
+            setTimeout(() => {
+                rose.remove();
+            }, 8000);
+        }
+
+        setInterval(createRose, 400);
+    </script>
+
+</body>
+</html>
