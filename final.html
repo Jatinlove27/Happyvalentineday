@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Valentine's Day</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+            background: radial-gradient(circle at center, #8b0000, #4b0000, #1a0000);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 60px 20px;
+        }
+
+        .heart-container {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .heart {
+            font-size: 220px;
+            color: red;
+            animation: glow 2s infinite alternate;
+        }
+
+        .heart-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 20px rgba(255,255,255,0.9);
+        }
+
+        .final-text {
+            margin-top: 60px;
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.9;
+            text-shadow: 0 0 12px rgba(0,0,0,0.6);
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 30px #ff0000, 0 0 60px #ff4d4d;
+                transform: scale(1);
+            }
+            to {
+                text-shadow: 0 0 70px #ff1a1a, 0 0 120px #ff6666;
+                transform: scale(1.05);
+            }
+        }
+
+        /* Floating Hearts */
+        .floating-heart {
+            position: fixed;
+            bottom: -20px;
+            color: rgba(255,255,255,0.6);
+            animation: floatUp linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating tiny hearts -->
+    <script>
+        for (let i = 0; i < 30; i++) {
+            let heart = document.createElement("div");
+            heart.className = "floating-heart";
+            heart.innerHTML = "❤";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+            heart.style.animationDuration = (Math.random() * 6 + 6) + "s";
+            document.body.appendChild(heart);
+        }
+    </script>
+
+    <div class="container">
+
+        <div class="heart-container">
+            <div class="heart">❤</div>
+
+            <div class="heart-text">
+                Happy Valentine’s Day <br>
+                Nityaa ❤️
+            </div>
+        </div>
+
+        <div class="final-text">
+            Happy valentine day nityaa mera sonaa bachaa my lovee my baby my cutuuu my pretty girl my PIDDU my hottie gf and sometimes mumma tooo🫣🫣😁😁I loveeee youuuu soooooooo muchhhhhhh yaaarrrrrrrr woh baat alag hai you love me moree issi wazah se mujhe tu aur pyaari lagti hai😙😙baki mai haar toh nhi maanungaa😁😁ek din apna jyada karungaaa hihii bas ab mere saath rehna abhi toh bohot special moments bnane hai humne saath mein I loveee youuu❤️❤️
+        </div>
+
+    </div>
+
+</body>
+</html>
