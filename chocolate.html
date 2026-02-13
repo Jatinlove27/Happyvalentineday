@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chocolate Day</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #3e2723, #5d4037, #4e342e);
+            overflow: hidden;
+            color: #fff8e1;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+        }
+
+        .text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            text-shadow: 0 0 10px rgba(255, 204, 128, 0.6);
+        }
+
+        .choco {
+            position: fixed;
+            top: -50px;
+            font-size: 22px;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+
+        .btn {
+            margin-top: 30px;
+            background-color: #8d6e63;
+            border: none;
+            padding: 14px 28px;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background-color: #a1887f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="content">
+
+        <div class="text">
+            Baat aisi haii mera na bohot mnn hai tere ko milnee kaaa <br>
+            mai roz yeh hi dekhta hun ki kab woh din aayega <br>
+            jab mai tere ko milunga 😊😊 <br>
+            pehli baari time itna slow hai ki kya btaunn 😭😭
+        </div>
+
+        <button class="btn" onclick="location.href='teddy.html'">
+            mera bhi mnn hai milne ka ❤️
+        </button>
+
+    </div>
+
+    <script>
+        function createChocolate() {
+            const choco = document.createElement("div");
+            choco.classList.add("choco");
+            choco.innerHTML = "🍫";
+            choco.style.left = Math.random() * 100 + "vw";
+            choco.style.animationDuration = (4 + Math.random() * 4) + "s";
+            document.body.appendChild(choco);
+
+            setTimeout(() => {
+                choco.remove();
+            }, 8000);
+        }
+
+        setInterval(createChocolate, 500);
+    </script>
+
+</body>
+</html>
