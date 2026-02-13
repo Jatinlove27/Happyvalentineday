@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Propose Day</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top, #000814, #001d3d, #003566);
+            overflow: hidden;
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: moveStars 60s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveStars {
+            from {background-position: 0 0;}
+            to {background-position: 10000px 5000px;}
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+        }
+
+        .proposal-text {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            text-shadow: 0 0 10px rgba(255,255,255,0.6);
+        }
+
+        .couple {
+            margin-top: 30px;
+            width: 250px;
+            filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+        }
+
+        .yes-btn {
+            margin-top: 30px;
+            background-color: #ff4d6d;
+            border: none;
+            padding: 14px 28px;
+            color: white;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .yes-btn:hover {
+            transform: scale(1.1);
+            background-color: #ff758f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="content">
+
+        <div class="proposal-text">
+            Meri achi nitya baat aisi haii <br>
+            I loveee youuu soooo muchhhh <br>
+            toh woh na fir se mnn kar rha puchne ka <br>
+            toh puch leta hun <br>
+            kya tu apne buddhu ko <br>
+            apni baaki ki life ka part bnana chahegi?? 🫣🫣
+        </div>
+
+        <!-- Couple silhouette -->
+        <img class="couple"
+        src="https://pngimg.com/uploads/lovers/lovers_PNG23.png"
+        alt="Couple silhouette">
+
+        <br>
+
+        <button class="yes-btn" onclick="location.href='chocolate.html'">
+            yess yess yesss ❤️
+        </button>
+
+    </div>
+
+</body>
+</html>
